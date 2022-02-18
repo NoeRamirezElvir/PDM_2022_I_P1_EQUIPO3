@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PDM_2022_I_P1_EQUIPO3</string>
+    <string name="imagen_alumnos">imagenAlumnos</string>
+    <string name="hint_nombre">Ingrese el nombre</string>
+    <string name="hint_numero_cuenta">Número de cuenta</string>
+    <string name="hint_carrera">Ingrese la carrera</string>
+    <string name="hint_correo">Ingrese el correo</string>
+    <string name="hint_Fecha">Seleccione la fecha</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="btnMostrar">Ver Alumnos</string>
+    <string name="btnRegresar">Regresar</string>
+    <string name="tvTituloAlumnos">Alumnos Registrados</string>
+    <string name="btnMostrarAlumnos">Mostrar Alumnos</string>
+    <string name="btnRegistrarAlumnos">Registrar Alumnos</string>
+    <string name="tvgenero">Genero</string>
+    <string name="txvTitulo">Titulo</string>
+    <string name="txvCarrera">Carrera</string>
+    <string name="txvFechaIngreso">Fecha de Ingreso</string>
+    <string name="txvNumeroCuenta">Numero de Cuenta</string>
+    <string name="txvCorreo">Correo</string>
+    <string name="txvNombre">Nombre</string>
+    <string name="txvMenuPrincipal">Menú Principal</string>
+    <string name="txvRegistroEstudiantes">Registro de Estudiantes</string>
+
+    <string-array name = "genero">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+</resources>
