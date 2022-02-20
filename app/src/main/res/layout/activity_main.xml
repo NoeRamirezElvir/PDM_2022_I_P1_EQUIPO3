@@ -46,6 +46,20 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
             android:text="@string/btnMostrarAlumnos" />
+        <Button
+            android:id="@+id/btnIngresarLibros"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:text="Registrar Libros" />
+        <Button
+            android:id="@+id/btnMostrarLibros"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:text="Visualizar Libros" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
