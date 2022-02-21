@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         inicializar()
-        button.setOnClickListener{mostrarRegistroAlumnos()}
+        btnRegistrarEstudiante.setOnClickListener{mostrarRegistroAlumnos()}
         btnMostrarAlumno.setOnClickListener{mostrarListaAlumnos()}
         //
         btnIngresarLibros.setOnClickListener { mostrarRegistroLibros() }

@@ -30,24 +30,26 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnRegistrarEstudiante"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="50dp"
             android:text="@string/btnRegistrarAlumnos"
             android:backgroundTint="@color/colorBtn"
             app:cornerRadius = "20dp"
+            android:drawableLeft="@drawable/r_estudiante"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btnMostrarAlumno"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/colorBtn"
             app:cornerRadius = "20dp"
+            android:drawableLeft="@drawable/estudiante"
             android:text="@string/btnMostrarAlumnos" />
 
         <Button
