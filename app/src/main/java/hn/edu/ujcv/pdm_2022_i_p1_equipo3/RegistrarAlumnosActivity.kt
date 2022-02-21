@@ -5,6 +5,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -54,32 +55,15 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
         }
         //
         btnRegistrar.setOnClickListener {
-            var alumno:Alumno = Alumno()
-            asignarDatos(alumno,spinner)
-            val cancelDialog = AlertDialog.Builder(this)
-                .setTitle("¿Desea registrar el siguiente estudiante?")
-                .setMessage("${alumno.numeroCuenta}\n" +
-                        "${alumno.nombre}\n" +
-                        "${alumno.fechaIngreso}\n" +
-                        "${alumno.genero}\n" +
-                        "${alumno.correo}\n" +
-                        "${alumno.carrera}.")
-                .setIcon(R.drawable.icono_agregar)
-                .setPositiveButton("Si"){_,_ ->
-                    listaAlumnos.add(alumno)
-                    Toast.makeText(this,"Se ha registrado correctamente",Toast.LENGTH_SHORT).show()
-                    limpiar()
-                }
-                .setNegativeButton("No"){_,_ ->
-                    Toast.makeText(this,"No se ha registrado",Toast.LENGTH_SHORT).show()
-                }.create()
-            cancelDialog.show()
-            //Enviar
-            binding.btnMostrarAlumno.setOnClickListener{
-                enviarMostrar()
-            }
-            binding.btnRegresar.setOnClickListener {
-                enviarMain()
+            if(!validarBoton()){
+                Toast.makeText(this, "Comprobar los datos", Toast.LENGTH_SHORT).show()
+            }else{
+                val alumno:Alumno = Alumno()
+                asignarDatos(alumno,spinner)
+                dialogo(alumno)
+
+                binding.btnMostrarAlumno.setOnClickListener{ enviarMostrar() }
+                binding.btnRegresar.setOnClickListener { enviarMain() }
             }
         }
     }
@@ -110,13 +94,32 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
         alumno.correo = binding.tiltxtCorreo.text.toString()
         alumno.genero = spinner.selectedItem.toString()
     }
+    private fun dialogo(alumno: Alumno){
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("¿Desea registrar el siguiente estudiante?")
+            .setMessage("${alumno.numeroCuenta}\n" +
+                    " ${alumno.nombre}\n" +
+                    " ${alumno.fechaIngreso}\n" +
+                    "${alumno.genero}\n" +
+                    " ${alumno.correo}\n" +
+                    " ${alumno.carrera}.")
+            .setIcon(R.drawable.icono_agregar)
+            .setPositiveButton("Si"){_,_ ->
+                listaAlumnos.add(alumno)
+                Toast.makeText(this,"Se ha registrado correctamente",Toast.LENGTH_SHORT).show()
+                limpiar()
+            }
+            .setNegativeButton("No"){_,_ ->
+                Toast.makeText(this,"No se ha registrado",Toast.LENGTH_SHORT).show()
+            }.create()
+        dialog.show()
+    }
     private fun validarDatos(){
         numeroCuentaFocused()
         nombreFocused()
         fechaFocused()
         carreraFocused()
         correoFocused()
-        binding.btnRegistrar.isEnabled = validarControlesTexto()
     }
     private fun limpiar(){
         binding.tiltxtFecha.text = null
@@ -126,26 +129,25 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
         binding.tiltxtCorreo.text = null
 
     }
-    private fun validarControlesTexto():Boolean{
-        when {
-            binding.tiltxtNumeroCuenta.text.isNullOrEmpty() -> {
-                return false
-            }
-            binding.tiltxtNombre.text.isNullOrEmpty() -> {
-                return false
-            }
-            binding.tiltxtFecha.text.isNullOrEmpty() -> {
-                return false
-            }
-            binding.tiltxtCarrera.text.isNullOrEmpty() -> {
-                return false
-            }
-            binding.tiltxtCorreo.text.isNullOrEmpty() -> {
-                return false
-            }
-            else ->{
-                return true
-            }
+    private fun validarBoton():Boolean{
+        when{
+            binding.tiltxtNumeroCuenta.text.isNullOrEmpty() -> return false
+            binding.tiltxtNumeroCuenta.text!!.length < 10 -> return false
+            binding.tiltxtNumeroCuenta.text!!.length >10 ->return false
+            binding.tiltxtNombre.text.isNullOrEmpty() -> return false
+            binding.tiltxtNombre.text!!.length < 3 -> return false
+            binding.tiltxtNombre.text!!.length > 40 -> return false
+            binding.tiltxtCarrera.text.isNullOrEmpty() -> return false
+            binding.tiltxtCarrera.text!!.length < 3 -> return false
+            binding.tiltxtCarrera.text!!.length > 50 -> return false
+            binding.tiltxtFecha.text.isNullOrEmpty() -> return false
+            binding.tiltxtFecha.text!!.length < 5 -> return false
+            binding.tiltxtFecha.text!!.length > 20 -> return false
+            binding.tiltxtCorreo.text.isNullOrEmpty() -> return false
+            binding.tiltxtCorreo.text!!.length < 5 -> return false
+            binding.tiltxtCorreo.text!!.length > 50 -> return false
+            !Patterns.EMAIL_ADDRESS.matcher(binding.tiltxtCorreo.text!!).matches() -> return false
+            else -> return true
         }
     }
     private fun numeroCuentaFocused(){
@@ -180,9 +182,7 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
                 throw Exception("La fecha de cuenta está vacía.")
             }
             Alumno().ValidacionesAlumnos().validarFecha(binding.tiltxtFecha.text.toString())
-            binding.btnRegistrar.isEnabled = validarControlesTexto()
         }catch (ex:Exception){
-            binding.btnRegistrar.isEnabled = false
             mensaje = ex.message
         }finally {
             return  mensaje
@@ -195,10 +195,8 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
                 throw Exception("El número de cuenta está vacío.")
             }
             Alumno().ValidacionesAlumnos().validarCuenta(binding.tiltxtNumeroCuenta.text.toString().toLong())
-            binding.btnRegistrar.isEnabled = validarControlesTexto()
         }catch (ex:Exception){
             mensaje = ex.message
-            binding.btnRegistrar.isEnabled = false
         }finally {
             return  mensaje
         }
@@ -210,10 +208,8 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
                 throw Exception("El nombre de cuenta está vacío.")
             }
             Alumno().ValidacionesAlumnos().validarNombre(binding.tiltxtNombre.text.toString())
-            binding.btnRegistrar.isEnabled = validarControlesTexto()
         }catch (ex:Exception){
             mensaje = ex.message
-            binding.btnRegistrar.isEnabled = false
         }finally {
             return  mensaje
         }
@@ -225,10 +221,8 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
                 throw Exception("La carrera está vacía.")
             }
             Alumno().ValidacionesAlumnos().validarCarrera(binding.tiltxtCarrera.text.toString())
-            binding.btnRegistrar.isEnabled = validarControlesTexto()
         }catch (ex:Exception){
             mensaje = ex.message
-            binding.btnRegistrar.isEnabled = false
         }finally {
             return  mensaje
         }
@@ -240,10 +234,8 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
                 throw Exception("La carrera está vacía.")
             }
             Alumno().ValidacionesAlumnos().validarCorreo(binding.tiltxtCorreo.text.toString())
-            binding.btnRegistrar.isEnabled = validarControlesTexto()
         }catch (ex:Exception){
             mensaje = ex.message
-            binding.btnRegistrar.isEnabled = false
         }finally {
             return  mensaje
         }

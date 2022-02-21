@@ -23,6 +23,18 @@
         <entry key="..\:/Users/nblad/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_alumnos.xml" value="0.2" />
         <entry key="..\:/Users/nblad/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_registrar_alumnos.xml" value="0.15254237288135594" />
         <entry key="..\:/Users/nblad/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/row_alumnos.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_autor.xml" value="0.1745" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_editorial.xml" value="0.1745" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_fecha.xml" value="0.1745" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_return.xml" value="0.1745" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_libros.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_prestamo.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostar_prestamos.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_alumnos.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_libros.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/list_item_libro.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Proyecto1/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/row_prestamos.xml" value="0.2" />
       </map>
     </option>
   </component>
