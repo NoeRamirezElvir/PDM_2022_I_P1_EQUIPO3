@@ -12,23 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:padding="16dp">
+        tools:layout_editor_absoluteY="1dp">
 
         <TextView
             android:id="@+id/txvMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:text="@string/txvMenuPrincipal"
-            android:focusable="false"
             android:clickable="false"
-            android:textColor="@color/white"
-            android:textStyle="bold"
+            android:focusable="false"
+            android:text="@string/txvMenuPrincipal"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="30sp"
-             />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button"
@@ -37,6 +36,8 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="50dp"
             android:text="@string/btnRegistrarAlumnos"
+            android:backgroundTint="@color/colorBtn"
+            app:cornerRadius = "20dp"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
@@ -45,21 +46,51 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
+            android:backgroundTint="@color/colorBtn"
+            app:cornerRadius = "20dp"
             android:text="@string/btnMostrarAlumnos" />
+
         <Button
             android:id="@+id/btnIngresarLibros"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
+            android:backgroundTint="@color/colorBtn"
+            app:cornerRadius = "20dp"
             android:text="Registrar Libros" />
+
         <Button
             android:id="@+id/btnMostrarLibros"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
+            android:backgroundTint="@color/colorBtn"
+            app:cornerRadius = "20dp"
             android:text="Visualizar Libros" />
+
+        <Button
+            android:id="@+id/btnIngresarP"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/colorBtn"
+            android:text="Ingresar Préstamo"
+            android:drawableLeft="@drawable/ic_prestamo"
+            app:cornerRadius = "20dp"/>
+
+        <Button
+            android:id="@+id/btnVisualizarP"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/colorBtn"
+            android:text="Visualizar Préstamos"
+            app:cornerRadius = "20dp"
+            android:drawableLeft="@drawable/ic_visualizarp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

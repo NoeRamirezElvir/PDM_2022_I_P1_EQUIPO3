@@ -30,7 +30,6 @@ class AdapterAlumnos(var mCxtx:Context,var resources:Int,var items:List<ModelAlu
         vistaCarrera.text = mItem.carrera
         vistaFecha.text  = mItem.fecha
         vistaCorreo.text = mItem.correo
-
         return view
     }
 

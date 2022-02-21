@@ -2,10 +2,8 @@ package hn.edu.ujcv.pdm_2022_i_p1_equipo3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import clases.*
-import hn.edu.ujcv.pdm_2022_i_p1_equipo3.databinding.ActivityMostrarAlumnosBinding
 
 
 class MostrarLibrosActivity : AppCompatActivity() {
@@ -29,6 +27,7 @@ class MostrarLibrosActivity : AppCompatActivity() {
         val intent = intent
         if (intent.getSerializableExtra("libros") != null) {
             listaLibros = intent.getSerializableExtra("libros") as ArrayList<Libro>
+            listaLibros.sort()
         }
     }
 
