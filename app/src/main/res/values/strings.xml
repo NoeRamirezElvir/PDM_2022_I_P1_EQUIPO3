@@ -21,7 +21,10 @@
     <string name="txvNombre">Nombre</string>
     <string name="txvMenuPrincipal">Menú Principal</string>
     <string name="txvRegistroEstudiantes">Registro de Estudiantes</string>
-
+    <string name="hint_numero_prestamo">Número de Préstamo</string>
+    <string name="hint_numero_libro">Número de Libro</string>
+    <string name="hint_Fecha_P">Seleccione la Fecha del Préstamo</string>
+    <string name="hint_Fecha_PD">Fecha de Devolución</string>
     <string-array name="genero">
         <item>Masculino</item>
         <item>Femenino</item>

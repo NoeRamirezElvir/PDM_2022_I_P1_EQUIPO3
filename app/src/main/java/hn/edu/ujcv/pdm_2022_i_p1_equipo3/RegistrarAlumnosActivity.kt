@@ -59,11 +59,11 @@ class RegistrarAlumnosActivity : AppCompatActivity(), DatePickerDialog.OnDateSet
             val cancelDialog = AlertDialog.Builder(this)
                 .setTitle("¿Desea registrar el siguiente estudiante?")
                 .setMessage("${alumno.numeroCuenta}\n" +
-                        " ${alumno.nombre}\n" +
-                        " ${alumno.fechaIngreso}\n" +
+                        "${alumno.nombre}\n" +
+                        "${alumno.fechaIngreso}\n" +
                         "${alumno.genero}\n" +
-                        " ${alumno.correo}\n" +
-                        " ${alumno.carrera}.")
+                        "${alumno.correo}\n" +
+                        "${alumno.carrera}.")
                 .setIcon(R.drawable.icono_agregar)
                 .setPositiveButton("Si"){_,_ ->
                     listaAlumnos.add(alumno)

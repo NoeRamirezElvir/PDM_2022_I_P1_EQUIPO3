@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P1_EQUIPO3">
         <activity
+            android:name=".MostarPrestamosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IngresarPrestamoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MostrarLibrosActivity"
             android:exported="false" />
         <activity
