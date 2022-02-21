@@ -6,13 +6,16 @@
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/btn_gradient.xml" value="0.1" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/custom_button.xml" value="0.1485" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/gradient.xml" value="0.1865" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic__243327_ux_book_app_basic_icon.xml" value="0.118" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_book_icon.xml" value="0.1755" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_code.xml" value="0.1" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_libro.xml" value="0.1" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/ic_return.xml" value="0.1755" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_libro.xml" value="0.17753623188405798" />
-        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_libros.xml" value="0.2" />
-        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_libros.xml" value="0.18" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_prestamo.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostar_prestamos.xml" value="0.1403985507246377" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_alumnos.xml" value="0.2" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_libros.xml" value="0.17" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_registrar_alumnos.xml" value="0.22" />

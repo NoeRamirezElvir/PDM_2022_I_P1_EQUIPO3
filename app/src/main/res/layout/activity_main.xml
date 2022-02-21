@@ -60,6 +60,7 @@
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/colorBtn"
             app:cornerRadius = "20dp"
+            android:drawableLeft="@drawable/book_icon"
             android:text="Registrar Libros" />
 
         <Button
@@ -69,6 +70,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/colorBtn"
+            android:drawableLeft="@drawable/ic_mostrar_libros"
             app:cornerRadius = "20dp"
             android:text="Visualizar Libros" />
 

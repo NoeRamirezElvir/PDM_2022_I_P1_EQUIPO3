@@ -65,7 +65,11 @@
         android:id="@+id/sclmain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintTop_toTopOf="@+id/topView"
         tools:layout_editor_absoluteX="16dp">
 
@@ -209,46 +213,56 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/btnGuardar"
-                android:layout_width="136dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_gradient"
-                android:text="Guardar"
-                android:textColor="#F8F3F3"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btnMostrar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tlEditorial"
-                app:layout_constraintVertical_bias="0.095"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/btnMostrar"
-                android:layout_width="136dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="10dp"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/btn_gradient"
-                android:text="Mostrar "
-                android:textAlignment="center"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.386"
-                app:layout_constraintStart_toEndOf="@+id/btnGuardar"
-                app:layout_constraintTop_toBottomOf="@+id/tlEditorial"
-                app:layout_constraintVertical_bias="0.1"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="136dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_gradient"
+                    android:text="Guardar"
+                    android:textColor="#F8F3F3"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnMostrar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tlEditorial"
+                    app:layout_constraintVertical_bias="0.095"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/btnMostrar"
+                    android:layout_width="136dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_gradient"
+                    android:text="Mostrar "
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.386"
+                    app:layout_constraintStart_toEndOf="@+id/btnGuardar"
+                    app:layout_constraintTop_toBottomOf="@+id/tlEditorial"
+                    app:layout_constraintVertical_bias="0.1"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </LinearLayout>
     </ScrollView>
 

@@ -187,11 +187,11 @@ class IngresarLibrosActivity : AppCompatActivity() {
             txtNombreLibro.text!!.length < 3 -> return false
             txtNombreLibro.text!!.length > 40 -> return false
             txtAutor.text.isNullOrEmpty() -> return false
-            txtAutor.text!!.length < 3 -> return false
+            txtAutor.text!!.length < 5 -> return false
             txtAutor.text!!.length > 40 -> return false
             txtFecha.text.isNullOrEmpty() -> return false
             txtEditorial.text.isNullOrEmpty() -> return false
-            txtEditorial.text!!.length < 3 -> return false
+            txtEditorial.text!!.length < 5 -> return false
             txtEditorial.text!!.length > 40 -> return false
             else -> return true
         }
