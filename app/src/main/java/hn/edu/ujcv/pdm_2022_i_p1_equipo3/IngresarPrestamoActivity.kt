@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_ingresar_prestamo.*
 class IngresarPrestamoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIngresarPrestamoBinding
     var listaPrestamos:ArrayList<Prestamo> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityIngresarPrestamoBinding.inflate(layoutInflater)
@@ -32,6 +33,7 @@ class IngresarPrestamoActivity : AppCompatActivity() {
             binding.btnRegresarP.setOnClickListener { regresar() }
             binding.btnMostarPrestamo.setOnClickListener { mostrar() }
         }
+
     }
 
     private fun inicializar() {
@@ -42,9 +44,18 @@ class IngresarPrestamoActivity : AppCompatActivity() {
         }
     }
     private fun mostrar() {
-        val intent = Intent(this, MostarPrestamosActivity::class.java)
-        intent.putExtra("prestamos", listaPrestamos)
-        startActivity(intent)
+        if (listaPrestamos.isNullOrEmpty()){
+            val cancelDialog = AlertDialog.Builder (this)
+                .setTitle("No hay registros para Mostrar")
+                .setMessage("Falta de Información")
+                .setIcon(R.drawable.icono_cancelar)
+                .setPositiveButton("Aceptar"){_,_->}.create()
+            cancelDialog.show()
+        }else{
+            val intent = Intent(this, MostarPrestamosActivity::class.java)
+            intent.putExtra("prestamos", listaPrestamos)
+            startActivity(intent)
+        }
     }
     private fun regresar(){
         val intent = Intent(this,MainActivity::class.java)

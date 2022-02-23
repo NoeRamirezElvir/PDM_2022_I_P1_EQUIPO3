@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_ingresar_prestamo.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostar_prestamos.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_mostrar_alumnos.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/activity_registrar_alumnos.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/layout/row_prestamos.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/btn_gradient.xml" value="0.1" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/custom_button.xml" value="0.1485" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P1_EQUIPO3/app/src/main/res/drawable/gradient.xml" value="0.1865" />

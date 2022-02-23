@@ -11,34 +11,104 @@
         android:id="@+id/txvTituloMostarPrestamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Préstamos de Libros por \n          No. de Cuenta"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="4dp"
+        android:text="Préstamos de Libros"
         android:textColor="@color/colorBtn"
         android:textSize="22dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroC"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumeroC"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txvTittuloNoC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="9dp"
+        android:text="No. de Cuenta"
+        android:textColor="@color/colorBtn"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumeroC"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/colorBtn"
+        android:text="Buscar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnListar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnListar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/colorBtn"
+        android:text="Listar"
+        app:layout_constraintStart_toStartOf="@+id/txtNumeroC"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroC"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="127dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/txvTituloMostarPrestamo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_mostar_p" />
 
-    <ListView
-        android:id="@+id/listViewPrestamos"
-        android:layout_width="409dp"
-        android:layout_height="417dp"
-        android:layout_marginTop="57dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txvTituloMostarPrestamo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
+        tools:ignore="MissingConstraints">
+        android:orientation="horizontal"
+        android:padding="16dp"
+
+        <ListView
+            android:id="@+id/listViewPrestamos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.303"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.727" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtNumeroC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="121dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/txvTittuloNoC"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

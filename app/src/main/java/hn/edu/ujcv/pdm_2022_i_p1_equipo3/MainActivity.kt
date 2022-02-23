@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
     private fun mostrarIngresoP(){
         val intentp = Intent(this,IngresarPrestamoActivity::class.java)
         intentp.putExtra("prestamos",listaPrestamos)
+
         startActivity(intentp)
     }
     private fun mostrarListaPrestamos() {

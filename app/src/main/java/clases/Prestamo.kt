@@ -25,7 +25,7 @@ class Prestamo:Comparable<Prestamo>,Serializable {
     }
     var numeroCuenta  :  Long    = 0L
     set(value) {
-        if (value == null) {
+        if (value.toString().isNullOrEmpty()) {
             throw Exception("El número de cuenta está en blanco.")
         }
         if (value.toString().isNullOrEmpty()) {
